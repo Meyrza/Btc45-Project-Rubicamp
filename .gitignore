@@ -1,0 +1,6 @@
+# Ignore specific files
+tes.js
+tes.ts
+
+# Ignore the tes Rust folder
+tes/
