@@ -14,3 +14,5 @@ let totalBayar = totalBelanja - (totalBelanja * diskon / 100);
 console.log(`Total belanja: Rp ${totalBelanja}`);
 console.log(`Diskon: ${diskon}%`);
 console.log(`Total bayar: Rp ${totalBayar}`);
+
+export {};
