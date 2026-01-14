@@ -2,7 +2,8 @@ fn main() {
     //switch1()
     //switch2()
     //switch3()
-    switch4()
+    //switch4()
+    //switch5()
 }
 // fn switch1() {
 //     let nomor_hari = 3;
@@ -73,41 +74,60 @@ fn main() {
 //     }
 // }
 
-fn switch4() {
-    let bulan = 2;
-    let (nama_bulan, hari_dalam_bulan) = match bulan {
-        1 => ("Januari", 31),
-        2 => ("Februari", 28),
-        3 | 5 | 7 | 8 | 10 | 12 => {
-            let nama = match bulan {
-                3 => "Maret",
-                5 => "Mei",
-                7 => "Juli",
-                8 => "Agustus",
-                10 => "Oktober",
-                12 => "Desember",
-                _ => unreachable!(),
-            };
-            (nama, 31)
-        }
-        4 | 6 | 9 | 11 => {
-            let nama = match bulan {
-                4 => "April",
-                6 => "Juni",
-                9 => "September",
-                11 => "November",
-                _ => unreachable!(),
-            };
-            (nama, 30)
-        }
-        _ => {
-            println!("Nomor bulan tidak valid (1-12)");
-            return;
-        }
-    };
+// fn switch4() {
+//     let bulan = 2;
+//     let (nama_bulan, hari_dalam_bulan) = match bulan {
+//         1 => ("Januari", 31),
+//         2 => ("Februari", 28),
+//         3 | 5 | 7 | 8 | 10 | 12 => {
+//             let nama = match bulan {
+//                 3 => "Maret",
+//                 5 => "Mei",
+//                 7 => "Juli",
+//                 8 => "Agustus",
+//                 10 => "Oktober",
+//                 12 => "Desember",
+//                 _ => unreachable!(),
+//             };
+//             (nama, 31)
+//         }
+//         4 | 6 | 9 | 11 => {
+//             let nama = match bulan {
+//                 4 => "April",
+//                 6 => "Juni",
+//                 9 => "September",
+//                 11 => "November",
+//                 _ => unreachable!(),
+//             };
+//             (nama, 30)
+//         }
+//         _ => {
+//             println!("Nomor bulan tidak valid (1-12)");
+//             return;
+//         }
+//     };
 
-    println!(
-        "Bulan ke-{} ({}) memiliki {} hari",
-        bulan, nama_bulan, hari_dalam_bulan
-    );
-}
+//     println!(
+//         "Bulan ke-{} ({}) memiliki {} hari",
+//         bulan, nama_bulan, hari_dalam_bulan
+//     );
+// }
+
+// fn switch5() {
+//     let angka1 = 15;
+//     let angka2 = 4;
+//     let operator = '%';
+
+//     let hasil = match operator {
+//         '+' => Ok(angka1 + angka2),
+//         '-' => Ok(angka1 - angka2),
+//         '*' => Ok(angka1 * angka2),
+//         '/' | '%' if angka2 == 0 => Err("Error: pembagian/modulo dengan nol"),
+//         '/' => Ok(angka1 / angka2),
+//         '%' => Ok(angka1 % angka2),
+//         _ => Err("Operator tidak valid"),
+//     };
+
+//     println!("{}", hasil.unwrap_or_else(|e| e.to_string()));
+// }
+
