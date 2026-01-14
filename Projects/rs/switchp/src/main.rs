@@ -74,38 +74,30 @@ fn main() {
 //     }
 // }
 
-// fn switch4() {
+// fn main() {
 //     let bulan = 2;
-//     let (nama_bulan, hari_dalam_bulan) = match bulan {
+
+//     let (nama, hari) = match bulan {
 //         1 => ("Januari", 31),
 //         2 => ("Februari", 28),
-//         3 | 5 | 7 | 8 | 10 | 12 => {
-//             let nama = match bulan {
-//                 3 => "Maret",
-//                 5 => "Mei",
-//                 7 => "Juli",
-//                 8 => "Agustus",
-//                 10 => "Oktober",
-//                 12 => "Desember",
-//                 _ => unreachable!(),
-//             };
-//             (nama, 31)
-//         }
-//         4 | 6 | 9 | 11 => {
-//             let nama = match bulan {
-//                 4 => "April",
-//                 6 => "Juni",
-//                 9 => "September",
-//                 11 => "November",
-//                 _ => unreachable!(),
-//             };
-//             (nama, 30)
-//         }
+//         3 => ("Maret", 31),
+//         4 => ("April", 30),
+//         5 => ("Mei", 31),
+//         6 => ("Juni", 30),
+//         7 => ("Juli", 31),
+//         8 => ("Agustus", 31),
+//         9 => ("September", 30),
+//         10 => ("Oktober", 31),
+//         11 => ("November", 30),
+//         12 => ("Desember", 31),
 //         _ => {
-//             println!("Nomor bulan tidak valid (1-12)");
+//             println!("Nomor bulan tidak valid");
 //             return;
 //         }
 //     };
+
+//     println!("Bulan ke-{} ({}) memiliki {} hari", bulan, nama, hari);
+// }
 
 //     println!(
 //         "Bulan ke-{} ({}) memiliki {} hari",
