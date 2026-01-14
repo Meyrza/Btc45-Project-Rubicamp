@@ -1,47 +1,24 @@
 let bulan = 2;
-let namaBulan;
-let hariDalamBulan;
 
-switch (bulan) {
-  case 1:
-    namaBulan = "Januari";
-    hariDalamBulan = 31;
-    break;
-  case 2:
-    namaBulan = "Februari";
-    hariDalamBulan = 28;
-    break;
-  case 3: case 5: case 7: case 8: case 10: case 12:
-    namaBulan =
-      bulan === 3
-        ? "Maret"
-        : bulan === 5
-        ? "Mei"
-        : bulan === 7
-        ? "Juli"
-        : bulan === 8
-        ? "Agustus"
-        : bulan === 10
-        ? "Oktober"
-        : "Desember";
-    hariDalamBulan = 31;
-    break;
-  case 4: case 6: case 9: case 11:
-    namaBulan =
-      bulan === 4
-        ? "April"
-        : bulan === 6
-        ? "Juni"
-        : bulan === 9
-        ? "September"
-        : "November";
-    hariDalamBulan = 30;
-    break;
-  default:
-    console.log("Nomor bulan tidak valid (1-12)");
-    process.exit(1);
+let bulanData = [
+  { nama: "Januari", hari: 31 },
+  { nama: "Februari", hari: 28 },
+  { nama: "Maret", hari: 31 },
+  { nama: "April", hari: 30 },
+  { nama: "Mei", hari: 31 },
+  { nama: "Juni", hari: 30 },
+  { nama: "Juli", hari: 31 },
+  { nama: "Agustus", hari: 31 },
+  { nama: "September", hari: 30 },
+  { nama: "Oktober", hari: 31 },
+  { nama: "November", hari: 30 },
+  { nama: "Desember", hari: 31 }
+];
+
+if (bulan < 1 || bulan > 12) {
+  console.log("Nomor bulan tidak valid (1-12)");
+  process.exit(1);
 }
 
-console.log(
-  `Bulan ke-${bulan} (${namaBulan}) memiliki ${hariDalamBulan} hari`
-);
+let { nama, hari } = bulanData[bulan - 1];
+console.log(`Bulan ke-${bulan} (${nama}) memiliki ${hari} hari`);
