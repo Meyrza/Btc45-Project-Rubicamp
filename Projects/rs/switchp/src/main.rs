@@ -3,7 +3,7 @@ fn main() {
     //switch2()
     //switch3()
     //switch4()
-    //switch5()
+    switch5()
 }
 // fn switch1() {
 //     let nomor_hari = 3;
@@ -105,21 +105,21 @@ fn main() {
 //     );
 // }
 
-// fn switch5() {
-//     let angka1 = 15;
-//     let angka2 = 4;
-//     let operator = '%';
+fn switch5() {
+    let angka1 = 15;
+    let angka2 = 4;
+    let operator = "%";
 
-//     let hasil = match operator {
-//         '+' => Ok(angka1 + angka2),
-//         '-' => Ok(angka1 - angka2),
-//         '*' => Ok(angka1 * angka2),
-//         '/' | '%' if angka2 == 0 => Err("Error: pembagian/modulo dengan nol"),
-//         '/' => Ok(angka1 / angka2),
-//         '%' => Ok(angka1 % angka2),
-//         _ => Err("Operator tidak valid"),
-//     };
+    let hasil = match operator {
+        "+" => angka1 + angka2,
+        "-" => angka1 - angka2,
+        "*" => angka1 * angka2,
+        "/" => if angka2 != 0 { angka1 / angka2 } else { return println!("Error") },
+        "%" => if angka2 != 0 { angka1 % angka2 } else { return println!("Error") },
+        _ => return println!("Operator tidak valid"),
+    };
 
-//     println!("{}", hasil.unwrap_or_else(|e| e.to_string()));
-// }
+    println!("{} {} {} = {}", angka1, operator, angka2, hasil);
+}
+
 
