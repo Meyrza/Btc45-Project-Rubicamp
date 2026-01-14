@@ -16,7 +16,7 @@ let bulanData = [
 ];
 
 if (bulan < 1 || bulan > 12) {
-  console.log("Nomor bulan tidak valid (1-12)");
+  console.log("Nomor bulan tidak valid");
   process.exit(1);
 }
 
