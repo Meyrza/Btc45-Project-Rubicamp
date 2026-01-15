@@ -2,13 +2,31 @@ let angka1 = 15;
 let angka2 = 4;
 let operator = "%";
 
-const hitung = {
-  "+": () => angka1 + angka2,
-  "-": () => angka1 - angka2,
-  "*": () => angka1 * angka2,
-  "/": () => angka2 !== 0 ? angka1 / angka2 : "Error",
-  "%": () => angka2 !== 0 ? angka1 % angka2 : "Error",
-};
+let hasil;
 
-const hasil = hitung[operator]?.() ?? "Operator tidak valid";
+switch (operator) {
+  case "+":
+    hasil = angka1 + angka2;
+    break;
+
+  case "-":
+    hasil = angka1 - angka2;
+    break;
+
+  case "*":
+    hasil = angka1 * angka2;
+    break;
+
+  case "/":
+    hasil = angka2 !== 0 ? angka1 / angka2 : "Error";
+    break;
+
+  case "%":
+    hasil = angka2 !== 0 ? angka1 % angka2 : "Error";
+    break;
+
+  default:
+    hasil = "Operator tidak valid";
+}
+
 console.log(hasil);

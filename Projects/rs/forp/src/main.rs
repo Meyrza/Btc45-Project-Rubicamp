@@ -1,5 +1,6 @@
 fn main() {
     //for1()
+    //for2()
 }
 
 // fn for1() {
@@ -8,8 +9,8 @@ fn main() {
 //     }
 // }
 
-fn for2() {
-    for i in (2..=20).step_by(2){
-        println!("{}", i)
-    }
-}
+// fn for2() {
+//     for i in (2..=20).step_by(2){
+//         println!("{}", i)
+//     }
+// }
